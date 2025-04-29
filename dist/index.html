@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Чат</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <div id="login">
+      <input id="name" placeholder="Введите ник" />
+      <button id="submit">Продолжить</button>
+      <p id="error" style="color: red"></p>
+    </div>
+
+    <div id="chat" style="display: none">
+      <div id="chat-wrapper" style="display: flex">
+        <!-- Блок пользователей -->
+        <div
+          id="users"
+          style="
+            width: 200px;
+            padding-right: 20px;
+            border-right: 1px solid #ccc;
+          "
+        >
+          <h3>Пользователи</h3>
+          <ul id="userList"></ul>
+        </div>
+
+        <!-- Блок сообщений -->
+        <div id="messages-wrapper" style="flex-grow: 1; padding-left: 20px">
+          <div id="messages"></div>
+          <div id="msg-container">
+            <input id="msg" placeholder="Сообщение" />
+            <button id="send-btn">✉️</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
